@@ -8,12 +8,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-*{font-family: 'Noto Sans TC', sans-serif;}
+*{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;}
 .project{display: none; width: 70%; margin-top: 50px;}
 .header{font-weight: 500;}
 .subject{width: 12%;}
 #content{min-height: 100vh;}
 html{overflow-y: scroll;}
+.math{background: url("../images/math.png");}
+.physics{background: url("../images/physics.png");}
+.chemistry{background: url("../images/chemistry.png");}
+.biology{background: url("../images/biology.png");}
+.earthscience{background: url("../images/covid.png");}
+.information{background: url("../images/information.png");}
+.math,.physics,.chemistry,.biology,.earthscience,.information{padding-bottom: 15%;padding-top: 15%;background-position: center center;width: 100%;background-size: cover;}
+.math:hover,.physics:hover,.chemistry:hover,.biology:hover,.earthscience:hover,.information:hover{transform: scale(1.1,1.1);transition-duration: 0.3s;}
 </style>
 </head>
 <body onresize="resize()">
@@ -65,6 +73,16 @@ html{overflow-y: scroll;}
 </div>
 <!-- projects -->
 <div id="content"><center>
+	<div class="w3-row">
+		<div class="w3-col l4 m4 s12 math"></div>
+		<div class="w3-col l4 m4 s12 physics"></div>
+		<div class="w3-col l4 m4 s12 chemistry"></div>
+	</div>
+	<div class="w3-row">
+		<div class="w3-col l4 m4 s12 biology"></div>
+		<div class="w3-col l4 m4 s12 earthscience"></div>
+		<div class="w3-col l4 m4 s12 information"></div>
+	</div>
 	<div id="pj0">
 		<br><br><br>
 		<img src="../images/logo.png" style="max-width: 50%; max-height: 50%;">
