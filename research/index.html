@@ -9,18 +9,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 *{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;}
+html{overflow-y: scroll;}
 .project{display: none; width: 70%; margin-top: 50px;}
 .header{font-weight: 500;}
 .subject{width: 12%;}
+.w3-button{transition-duration: 0.5s;}
+.home{background-color: #ccc; color: black; padding-left: 0; padding-right: 0;}
+.home:hover{transition-duration: 0.1s;font-weight: 1000;}
 #content{min-height: 100vh;}
-html{overflow-y: scroll;}
 .math{background: url("../images/math.png");}
 .physics{background: url("../images/physics.png");}
 .chemistry{background: url("../images/chemistry.png");}
 .biology{background: url("../images/biology.png");}
 .earthscience{background: url("../images/covid.png");}
 .information{background: url("../images/information.png");}
-.math,.physics,.chemistry,.biology,.earthscience,.information{padding-bottom: 15%;padding-top: 15%;background-position: center center;width: 100%;background-size: cover;}
+.math,.physics,.chemistry,.biology,.earthscience,.information{padding-bottom: 15%;padding-top: 15%;background-position: center center;width: 100%;background-size: cover;cursor: pointer;}
 .math:hover,.physics:hover,.chemistry:hover,.biology:hover,.earthscience:hover,.information:hover{transform: scale(1.1,1.1);transition-duration: 0.3s;}
 </style>
 </head>
@@ -28,8 +31,8 @@ html{overflow-y: scroll;}
 <!-- navigation -->
 <div id="navigation" class="w3-top">
 	<div class="w3-bar w3-black w3-large">
-		<a href="../index.html" class="w3-bar-item w3-button w3-hide-small" style="width: 17%; background-color: #ccc; color: black; padding-left: 0; padding-right: 0;">Innovation</a>
-		<a href="../index.html" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" style="width: 50%; background-color: #ccc; color: black; padding-left: 0; padding-right: 0;">Innovation</a>
+		<a href="../index.html" class="w3-bar-item w3-button w3-hide-small home" style="width: 17%;">Innovation</a>
+		<a href="../index.html" class="w3-bar-item w3-button w3-hide-large w3-hide-medium home" style="width: 50%;">Innovation</a>
 		<div class="w3-hide-small" id="subjects">
 			<div></div>
 			<div class="w3-dropdown-hover w3-mobile subject">
