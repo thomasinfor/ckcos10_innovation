@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CKCOS10 專題研究</title>
+<title>reasearch | CKCOS10</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,7 +16,8 @@ html{overflow-y: scroll;}
 .w3-button{transition-duration: 0.5s;}
 .home{background-color: #ccc; color: black; padding-left: 0; padding-right: 0;}
 .home:hover{transition-duration: 0.1s;font-weight: 1000;}
-#content{min-height: 100vh;background-color: black;}
+#content{min-height: 100vh;background-color: white;}
+#pj0{background: url(../images/logo.png);background-position: center;background-repeat: no-repeat;background-size: contain;width: 100%;min-height: 100%;}
 .math{background: url("../images/math.png");}
 .physics{background: url("../images/physics.png");}
 .chemistry{background: url("../images/chemistry.png");}
@@ -76,7 +77,7 @@ html{overflow-y: scroll;}
 </div>
 <!-- projects -->
 <div id="content"><center>
-	<div class="w3-row">
+	<!-- <div class="w3-row">
 		<div class="w3-col l4 m4 s12 math"></div>
 		<div class="w3-col l4 m4 s12 physics"></div>
 		<div class="w3-col l4 m4 s12 chemistry"></div>
@@ -85,11 +86,8 @@ html{overflow-y: scroll;}
 		<div class="w3-col l4 m4 s12 biology"></div>
 		<div class="w3-col l4 m4 s12 earthscience"></div>
 		<div class="w3-col l4 m4 s12 information"></div>
-	</div>
-	<div id="pj0">
-		<!-- <br><br><br>
-		<img src="../images/logo.png" style="max-width: 50%; max-height: 50%;"> -->
-	</div>
+	</div> -->
+	<div id="pj0"></div>
 	<div class="project" id="pj1">
 		<h1 class="header">以人工智慧技術開發自動配音效系統</h1>
 		<p class="intro">以人工智慧技術開發自動配音效系統</p>
@@ -109,9 +107,9 @@ html{overflow-y: scroll;}
 	</div>
 </center></div>
 <!-- footer -->
-<!-- <div id="footer" class="w3-container w3-teal">
-	<h5>Designed By  < nocodenolife ></h5>
-</div> -->
+<div id="footer" class="w3-container w3-teal">
+	<h5>Designed By < nocodenolife ></h5>
+</div>
 <script>
 	// navigation
 	document.getElementById('list').innerHTML=document.getElementById('subjects').innerHTML;
@@ -123,10 +121,10 @@ html{overflow-y: scroll;}
 	// content size
 	const con=document.getElementById('content');
 	const nav=document.getElementById('navigation');
-	// const ftr=document.getElementById('footer');
+	const ftr=document.getElementById('footer');
 	resize=()=>{
 		con.style.paddingTop=nav.offsetHeight+'px';
-		// con.style.paddingBottom=ftr.offsetHeight+'px';
+		con.style.paddingBottom=ftr.offsetHeight+'px';
 		lst.style.display='none';
 	}
 	resize();
@@ -136,9 +134,9 @@ html{overflow-y: scroll;}
 		if(last==id) id='pj0';
 		document.getElementById(last).style.display='none';
 		document.getElementById(id).style.display='inline-block';
-		// if(last=='pj0') ftr.classList.remove('w3-bottom');
+		if(last=='pj0') ftr.classList.remove('w3-bottom');
 		last=id;
-		// if(last=='pj0') ftr.classList.add('w3-bottom');
+		if(last=='pj0') ftr.classList.add('w3-bottom');
 	}
 	show(0);resize();
 </script>
