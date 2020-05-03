@@ -4,21 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <style>
 *{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;}
-*{background-color: transparent!important;}
 .hash-tag{font-weight: 900;color: blue;/*background-color: #eeeeee!important;*/padding: 5px;}
-.title{font-weight: 300;margin: 20px;color: black;}
+.title{font-weight: 300;margin: 20px;}
+@keyframes hr-thick{
+  0%    {width: 0px;}
+  100%  {width: 300px;}
+}
 hr.thick{border-width: 4px;border-radius: 40px;width: 300px;border-color: #d9d9d9;margin-top: 10px;margin-bottom: 40px;}
 hr.thin{border-width: 1px;border-radius: 40px;width: 200px;border-color: black;margin-top: 10px;margin-bottom: 40px;border-style: dashed;}
 .w3-row{width: 90%;}
 .w3-col{padding: 3%;}
 .intro{text-align: left;}
 .right{text-align: right;}
+.right{float: right;}
+#cover{background: url(./images/bgi-sky.png) no-repeat center fixed;background-size: cover;width: 100%;height: 100vh;z-index: -1;}
+#home{float: right;background-color: white;max-width: 120px;width: 15%;border-radius: 50%;margin: 20px;position: sticky;top: 20px;}
 </style>
 <body><center>
-<div class="w3-tag w3-xxxlarge title">&nbsp;教學團隊&nbsp;</div>
+<a id="home" href="./index.html"><img src="./images/logo.png"></a>
+<div id="cover" class="w3-display-container">
+  <div class="w3-display-middle" style="font-family: 'Tangerine', serif;font-size: 150px;color: white;width: 200%;">
+    About Us
+  </div>
+</div>
+<!--  -->
+<div class="w3-xxxlarge title">&nbsp;教學團隊&nbsp;</div>
 <hr class="thick">
 <div class="w3-row">
   <div class="w3-col s12 m7 l7">
@@ -30,12 +43,11 @@ hr.thin{border-width: 1px;border-radius: 40px;width: 200px;border-color: black;m
       </div>
     </div>
   </div>
-  <div class="w3-col s12 m5 l5"><img src="./images/biology_teacher.png" width="50%"></div>
+  <div class="w3-col s12 m5 l5"><img src="./images/biology_teacher.png" style="max-height: 250px;"></div>
 </div>
-<hr class="thin">
+<br><br><br><br>
 <div class="w3-row">
-  <div class="w3-col s12 m5 l5 w3-hide-small"><img src="./images/physics_teacher.png"></div>
-  <div class="w3-col s12 m7 l7">
+  <div class="w3-col s12 m7 l7 right">
     <div class="w3-cardd">
       <div class="w3-container intro">
         <h3><span class="hash-tag"># 張杰給我出去！</span></h3>
@@ -48,9 +60,11 @@ hr.thin{border-width: 1px;border-radius: 40px;width: 200px;border-color: black;m
       </div>
     </div>
   </div>
-  <div class="w3-col s12 m5 l5 w3-hide-medium w3-hide-large"><img src="./images/physics_teacher.png"></div>
+  <div class="w3-col s12 m5 l5"><img src="./images/physics_teacher.png"></div>
 </div>
-<hr class="thin">
+<script>
+
+</script>
 </center></body>
 </html>
 
