@@ -22,11 +22,17 @@ hr.thin{border-width: 1px;border-radius: 40px;width: 200px;border-color: black;m
 .right{float: right;}
 #cover{background: url(./images/bgi-sky.png) no-repeat center fixed;background-size: cover;width: 100%;height: 100vh;z-index: -1;}
 #home{float: right;background-color: white;max-width: 120px;width: 15%;border-radius: 50%;margin: 20px;position: sticky;top: 20px;}
+#cover > .w3-display-middle{font-family: 'Tangerine', serif;font-size: 150px;color: white;width: 200%;}
+@media only screen and (max-width: 500px) {
+  #cover > .w3-display-middle{
+    font-size: 100px;
+  }
+}
 </style>
 <body><center>
 <a id="home" href="./index.html"><img src="./images/logo.png"></a>
 <div id="cover" class="w3-display-container">
-  <div class="w3-display-middle" style="font-family: 'Tangerine', serif;font-size: 150px;color: white;width: 200%;">
+  <div class="w3-display-middle">
     About Us
   </div>
 </div>
