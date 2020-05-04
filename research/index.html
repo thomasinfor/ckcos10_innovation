@@ -66,7 +66,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">資訊</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a id="test" class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">以人工智慧技術開發自動配音效系統</a>
+          <a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">以人工智慧技術開發自動配音效系統</a>
         </div>
       </div>
     </div>
@@ -95,7 +95,13 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
     </div>
     <div>
       <h4>
-        <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton" onclick="pdfbutton(this);">Show PDF</div><div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton">Download</div>
+        <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton" onclick="pdfbutton(this);">Show PDF</div><div class="w3-dropdown-hover">
+          <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton">Download</div>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a class="w3-bar-item w3-button" href="./files/research.pdf" download="作品說明書.pdf">作品說明書</a>
+            <a class="w3-bar-item w3-button" href="./files/展板.pdf" download="海報.pdf">海報</a>
+          </div>
+        </div>
       </h4>
       <div class="project-file">
         <div class="w3-row">
