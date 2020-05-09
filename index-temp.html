@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>CKCOS10 Innovation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/icon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{font-family: cursive,'Noto Sans TC';max-width: 100%;overflow-wrap: break-word;}
+body, html {height: 100%}
+@keyframes title-shrink{
+  0%    {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  100%    {
+    margin-top: 30px;
+    font-size: 60px;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0%);
+  }
+}
+#title{
+  font-family: Tangerine;
+  font-size: 120px;
+  position: absolute;
+  margin: 0; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: title-shrink 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@media only screen and (max-width: 360px){
+  #title{font-size: 100px;}
+}
+@keyframes line{
+  0%    {
+    display: block;
+    visibility: visible;
+  }
+  100%    {
+    width: 90vw;
+    visibility: visible;
+    display: block;
+  }
+}
+#box{
+  display: none;
+  text-align: center;
+  height: 50vh;
+  width: 0;
+  max-width: 600px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  animation: line 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#text{
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 90%;
+  transform: translate(-50%,-50%);
+}
+@keyframes logo{
+  0%    {opacity: 0;}
+  50%   {opacity: 1;}
+  100%  {opacity: 0;}
+}
+#logo{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: none;
+  background: url(./images/logo.png) no-repeat center center;
+  background-size: contain;
+  animation: logo 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+#link{
+  font-size:50px;
+  position: absolute;
+  bottom: 0; left: 50%;
+  margin-bottom: 30px;
+  width: 100%;
+  transform: translate(-50%,0);
+}
+#link > div.w3-container > div.w3-cell{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#link > div.w3-container > div.w3-cell > a > img{
+  height: 50px;
+  display: inline-block;
+}
+#link > div.w3-container > div.w3-cell > a > i{
+  vertical-align: middle;
+  color: #fd1d1d;
+}
+</style>
+<body>
+<div id="title">Innovation</div>
+<div id="box">
+  <!-- <div id="logo"></div> -->
+  <div id="text">
+    <h2 style="font-weight: 800;">建國中學第十屆科學班成果發表會</h2>
+    <h3>13:00 ~ 17:00</h3>
+    <h3>2020 6/8 星期一</h3>
+    <h4>建國中學夢紅樓二樓展演廳</h4>
+    <h2>敬請期待</h2>
+  </div>
+</div>
+<center><div id="link">
+  <div class="w3-container">
+    <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+    <div class="w3-cell"><a><img src="./images/logo.png"></a></div>
+    <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img src="./images/ck-logo.png"></a></div>
+  </div>
+</div></center>
+<script>
+  function show(id,time){
+    document.getElementById(id).style.display='none';
+    setTimeout(()=>{document.getElementById(id).style.display='block'},time*1000);
+  }
+  show('box',1.7);
+  show('text',2.7);
+  // show('logo',2.7);
+  show('link',2.7);
+</script>
+</body>
+</html>
+
