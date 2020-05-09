@@ -11,6 +11,7 @@
 <style>
 *{font-family: cursive,'Noto Sans TC';max-width: 100%;overflow-wrap: break-word;}
 body, html {height: 100%}
+body{background: url(./images/mountain.png) no-repeat center center;background-size: cover;}
 @keyframes title-shrink{
   0%    {
     top: 50%;
@@ -102,31 +103,48 @@ body, html {height: 100%}
   padding-right: 10px;
 }
 #link > div.w3-container > div.w3-cell > a > img{
+  padding: 5px;
   height: 50px;
   display: inline-block;
 }
 #link > div.w3-container > div.w3-cell > a > i{
+  padding: 5px;
   vertical-align: middle;
   color: #fd1d1d;
 }
+@keyframes fade-in{
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
+.fade-in{
+  opacity: 0;
+  animation: fade-in 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+#a{animation-delay: 0.0s}
+#b{animation-delay: 0.5s;font-family: cursive;}
+#c{animation-delay: 1.0s;font-family: cursive;}
+#d{animation-delay: 1.5s}
+#e{animation-delay: 2.0s}
 </style>
 <body>
 <div id="title">Innovation</div>
 <div id="box">
   <!-- <div id="logo"></div> -->
   <div id="text">
-    <h2 style="font-weight: 800;">建國中學第十屆科學班成果發表會</h2>
-    <h3>13:00 ~ 17:00</h3>
-    <h3>2020 6/8 星期一</h3>
-    <h4>建國中學夢紅樓二樓展演廳</h4>
-    <h2>敬請期待</h2>
+    <h2 style="font-weight: 800;" class="fade-in" id="a">建國中學第十屆科學班成果發表會</h2>
+    <h2 class="fade-in" id="b">13:00 ~ 17:00</h2>
+    <h2 class="fade-in" id="c">Mon, June 8</h2>
+    <h4 class="fade-in" id="d">建國中學夢紅樓二樓展演廳</h4>
+    <h2 class="fade-in" id="e">敬請期待</h2>
   </div>
 </div>
-<center><div id="link">
+<center><div id="link" class="fade-in">
   <div class="w3-container">
-    <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram"></i></a></div>
-    <div class="w3-cell"><a><img src="./images/logo.png"></a></div>
-    <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img src="./images/ck-logo.png"></a></div>
+    <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram w3-btn"></i></a></div>
+    <div class="w3-cell"><a><img src="./images/icon.png"></a></div>
+    <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img class="w3-btn" src="./images/ck-logo.png"></a></div>
   </div>
 </div></center>
 <script>
@@ -134,10 +152,11 @@ body, html {height: 100%}
     document.getElementById(id).style.display='none';
     setTimeout(()=>{document.getElementById(id).style.display='block'},time*1000);
   }
+  show('title',0.0);
   show('box',1.7);
   show('text',2.7);
   // show('logo',2.7);
-  show('link',2.7);
+  show('link',5.2);
 </script>
 </body>
 </html>
