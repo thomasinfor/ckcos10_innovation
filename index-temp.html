@@ -19,8 +19,8 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
     transform: translate(-50%,-50%);
   }
   100%    {
-    margin-top: 30px;
-    font-size: 60px;
+    margin-top: 50px;
+    width: 170px;
     left: 50%;
     top: 0;
     transform: translate(-50%,0%);
@@ -28,7 +28,7 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
 }
 #title{
   font-family: Tangerine;
-  font-size: 120px;
+  width: 330px;
   position: absolute;
   margin: 0; top: 50%; left: 50%;
   transform: translate(-50%,-50%);
@@ -37,8 +37,8 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
-@media only screen and (max-width: 360px){
-  #title{font-size: 100px;}
+@media only screen and (max-width: 400px){
+  #title{width: 300px;}
 }
 @keyframes line{
   0%    {
@@ -129,7 +129,8 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
 #e{animation-delay: 2.0s}
 </style>
 <body>
-<div id="title">Innovation</div>
+<!-- <div id="title">Innovation</div> -->
+<img id="title" src="./images/Innovation-font.png"></div>
 <div id="box">
   <!-- <div id="logo"></div> -->
   <div id="text">
