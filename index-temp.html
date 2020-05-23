@@ -12,7 +12,8 @@
 *{font-family: 'Noto Sans TC';max-width: 100%;overflow-wrap: break-word;}
 body::-webkit-scrollbar{display: none;}
 body, html {height: 100%}
-#cover{height: 100vh;background: url(./images/mountain.png) no-repeat center center;background-size: cover;background-attachment: fixed;}
+body{background: url(./images/mountain.png) no-repeat center center;background-size: cover;background-attachment: fixed;}
+#cover{height: 100vh;}
 @keyframes title-shrink{
   0%    {
     top: 50%;
@@ -142,6 +143,7 @@ body, html {height: 100%}
 #schedule{height: 100vh;}
 table{text-align: left;font-size: 20px;border-collapse: collapse;border: 1px solid;}
 #schedule > div > table > tbody > tr:nth-child(odd){background-color: #81d9ff;}
+#schedule > div > table > tbody > tr:nth-child(even){background-color: #ffffff;}
 td{padding: 15px;}
 button{background-color: #81bf3f!important;}
 .w3-display-middle{width: 100%;}
