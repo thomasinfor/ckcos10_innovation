@@ -9,9 +9,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-*{font-family: cursive,'Noto Sans TC';max-width: 100%;overflow-wrap: break-word;}
+*{font-family: 'Noto Sans TC';max-width: 100%;overflow-wrap: break-word;}
+body::-webkit-scrollbar{display: none;}
 body, html {height: 100%}
-body{background: url(./images/mountain.png) no-repeat center center;background-size: cover;}
+#cover{height: 100vh;background: url(./images/mountain.png) no-repeat center center;background-size: cover;background-attachment: fixed;}
 @keyframes title-shrink{
   0%    {
     top: 50%;
@@ -134,29 +135,69 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
   animation-timing-function: linear;
 }
 #a{animation-delay: 0.0s}
-#b{animation-delay: 0.5s;font-family: cursive;}
-#c{animation-delay: 1.0s;font-family: cursive;}
+#b{animation-delay: 0.5s;}
+#c{animation-delay: 1.0s;}
 #d{animation-delay: 1.5s}
 #e{animation-delay: 2.0s}
+#schedule{height: 100vh;}
+table{text-align: left;font-size: 20px;border-collapse: collapse;border: 1px solid;}
+#schedule > div > table > tbody > tr:nth-child(odd){background-color: #81d9ff;}
+td{padding: 15px;}
+button{background-color: #81bf3f!important;}
+.w3-display-middle{width: 100%;}
 </style>
 <body>
-<!-- <div id="title">Innovation</div> -->
-<img id="title" src="./images/innovation-font.png">
-<div id="box">
-  <!-- <div id="logo"></div> -->
-  <div id="text">
-    <h2 style="font-weight: 800;" class="fade-in" id="a">建國中學第十屆科學班成果發表會</h2>
-    <h2 class="fade-in" id="b">13:00 ~ 17:00</h2>
-    <h2 class="fade-in" id="c">Mon, June 8</h2>
-    <h4 class="fade-in" id="d">建國中學夢紅樓二樓展演廳</h4>
-    <h2 class="fade-in" id="e">倒數<span id="time"></span>天 敬請期待</h2>
+<div id="cover">
+  <!-- <div id="title">Innovation</div> -->
+  <img id="title" src="./images/innovation-font.png">
+  <div id="box">
+    <!-- <div id="logo"></div> -->
+    <div id="text">
+      <h2 style="font-weight: 800;" class="fade-in" id="a">建國中學第十屆科學班成果發表會</h2>
+      <h2 class="fade-in" id="b">13:00 ~ 17:00</h2>
+      <h2 class="fade-in" id="c">Mon, June 8</h2>
+      <h4 class="fade-in" id="d">建國中學夢紅樓二樓展演廳</h4>
+      <h2 class="fade-in" id="e">倒數<span id="time"></span>天 敬請期待</h2>
+    </div>
   </div>
+  <center><div id="link" class="fade-in">
+    <div class="w3-container">
+      <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram w3-btn"></i></a></div>
+      <div class="w3-cell"><a><img src="./images/icon.png"></a></div>
+      <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img class="w3-btn" src="./images/ck-logo.png"></a></div>
+    </div>
+  </div></center>
 </div>
-<center><div id="link" class="fade-in">
-  <div class="w3-container">
-    <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram w3-btn"></i></a></div>
-    <div class="w3-cell"><a><img src="./images/icon.png"></a></div>
-    <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img class="w3-btn" src="./images/ck-logo.png"></a></div>
+<center><div id="schedule" class="w3-display-container">
+  <div class="w3-display-middle">
+    <table>
+      <tr>
+        <td>12:15 - 12:45</td>
+        <td>報到進場</td>
+      </tr>
+      <tr>
+        <td>12:45 - 13:25</td>
+        <td>開幕</td>
+      </tr>
+      <tr>
+        <td>13:30 - 14:45</td>
+        <td>專題報告1</td>
+      </tr>
+      <tr>
+        <td>14:45 - 15:15</td>
+        <td>中場休息</td>
+      </tr>
+      <tr>
+        <td>15:15 - 16:30</td>
+        <td>專題報告2</td>
+      </tr>
+      <tr>
+        <td>16:30 - 17:00</td>
+        <td>閉幕</td>
+      </tr>
+    </table>
+    <br>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctV76agik-sMDb1mD4s99c7deVrM84xyWgmVdMI7OLeMDtCQ/viewform?usp=sf_link" target="_blank"><button class="w3-button w3-round-large"><h3 style="margin: 0;">我要報名&nbsp;<i class="fa fa-caret-right"></i></h3></button></a>
   </div>
 </div></center>
 <script>
