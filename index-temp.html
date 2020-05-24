@@ -125,6 +125,7 @@ body{background: url(./images/mountain.png) no-repeat center center;background-s
   vertical-align: middle;
   color: #fd1d1d;
 }
+.w3-btn{height: 60px!important;width: 60px!important;}
 @keyframes fade-in{
   0%    {opacity: 0;}
   100%  {opacity: 1;}
@@ -205,7 +206,7 @@ button{background-color: #81bf3f!important;}
 <script>
   function show(id,time){
     document.getElementById(id).style.display='none';
-    setTimeout(()=>{console.log(id);document.getElementById(id).style.display='block'},time*1000);
+    setTimeout(()=>{document.getElementById(id).style.display='block'},time*1000);
   }
   show('title',0.0);
   show('box',1.7);
