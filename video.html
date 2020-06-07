@@ -18,7 +18,8 @@ html{scroll-behavior: smooth;}
 .navitem.activate::after{content: '';position: absolute;width: 15px;height: 15px;background-color: #0f0;border: 2px solid #FF9F55;top: 0;left: 50%;border-radius: 50%;transform: translate(-50%,-100%);transition: 0.5s;}
 .navitem > a{text-decoration: none;}
 #navigation > hr{margin: 0px;border-top: 3px solid white;transform: translateY(-1px);}
-.title::before{content: "";height: 65px;display: block;}
+.title::before{content: "";height: 80px;display: block;}
+.block{min-height: 100vh;}
 </style>
 <body><center>
   <div id="navigation">
@@ -30,25 +31,25 @@ html{scroll-behavior: smooth;}
     <div id="light-close" class="navitem"><a href="#close" onclick="goto(this.parentElement);">閉幕</a></div>
   </div>
   <h1>~成發回顧~</h1>
-  <div id="open">
+  <div id="open" class="block">
     <h3 class="title" id="open">開幕</h3>
     <iframe width="640" height="480" src="https://www.youtube.com/embed/QvsQ9hYKq7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div id="video">
+  <div id="video" class="block">
     <h3 class="title">主題影片</h3>
     <iframe width="853" height="480" src="https://www.youtube.com/embed/VRWSAuzM0jI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div id="presentation">
+  <div id="presentation" class="block">
     <h3 class="title" id="2f">化學、數學專題報告</h3>
     <iframe width="853" height="480" src="https://www.youtube.com/embed/w0AOGeqOnFY?list=RDMMw0AOGeqOnFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h3 class="title" id="4f">物理、資訊、生物專題報告</h3>
     <iframe width="640" height="480" src="https://www.youtube.com/embed/YziwCK2OiCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div id="song">
+  <div id="song" class="block">
     <h3 class="title">成發曲</h3>
     <iframe width="853" height="480" src="https://www.youtube.com/embed/1q82twrdr0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div id="close">
+  <div id="close" class="block">
     <h3 class="title">閉幕</h3>
     <iframe width="853" height="480" src="https://www.youtube.com/embed/vEvgUpqoaDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
