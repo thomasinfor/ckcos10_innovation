@@ -9,10 +9,77 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  *{font-family: "Noto Sans TC";}
+html{scroll-behavior: smooth;}
+*{font-family: "Noto Sans TC";max-width: 100%;max-height: 100%;box-sizing: inherit;}
+#navigation{position: sticky;top: 0;width: 100vw;padding: 20px 0;background-color: #81d9ff;display: block;}
+#navigation::before,#navigation:after{content: "";display: table;clear: both;}
+.navitem{display: block;float: left;width: 20%;transform: translateY(5px);}
+.navitem::after{content: '';position: absolute;width: 15px;height: 15px;background-color: white;border: 2px solid #FF9F55;top: 0;left: 50%;border-radius: 50%;transform: translate(-50%,-100%);transition: 0.5s;}
+.navitem.activate::after{content: '';position: absolute;width: 15px;height: 15px;background-color: #0f0;border: 2px solid #FF9F55;top: 0;left: 50%;border-radius: 50%;transform: translate(-50%,-100%);transition: 0.5s;}
+.navitem > a{text-decoration: none;}
+#navigation > hr{margin: 0px;border-top: 3px solid white;transform: translateY(-1px);}
+.title::before{content: "";height: 65px;display: block;}
 </style>
 <body><center>
-  <p>~成發回顧~</p>
-  <iframe width="640" height="480" src="https://www.youtube.com/embed/gYb9sRLUDyM?list=RDgYb9sRLUDyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div id="navigation">
+    <hr>
+    <div id="light-open" class="navitem"><a href="#open" onclick="goto(this.parentElement);">開幕</div>
+    <div id="light-video" class="navitem"><a href="#video" onclick="goto(this.parentElement);">主題影片</a></div>
+    <div id="light-presentation" class="navitem"><a href="#presentation" onclick="goto(this.parentElement);">專題報告</a></div>
+    <div id="light-song" class="navitem"><a href="#song" onclick="goto(this.parentElement);">成發曲</a></div>
+    <div id="light-close" class="navitem"><a href="#close" onclick="goto(this.parentElement);">閉幕</a></div>
+  </div>
+  <h1>~成發回顧~</h1>
+  <div id="open">
+    <h3 class="title" id="open">開幕</h3>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+  <div id="video">
+    <h3 class="title">主題影片</h3>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+  <div id="presentation">
+    <h3 class="title" id="2f">化學、數學專題報告</h3>
+    <br><br><br><br><br><br><br><br><br>
+    <h3 class="title" id="4f">物理、資訊、生物專題報告</h3>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+  <div id="song">
+    <h3 class="title">成發曲</h3>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
+  <div id="close">
+    <h3 class="title">閉幕</h3>
+    <br><br><br><br><br><br><br><br><br>
+  </div>
 </center></body>
+<script>
+  var last=null;
+  function goto(ele){
+    if(last==ele) return;
+    if(last!=null) last.classList.remove('activate');
+    ele.classList.add('activate');
+    last=ele;
+  }
+  function inview(elem){
+    return elem.getBoundingClientRect().bottom>65;
+  };
+  const open=document.getElementById('open');
+  const video=document.getElementById('video');
+  const presentation=document.getElementById('presentation');
+  const song=document.getElementById('song');
+  const close=document.getElementById('close');
+  const light_open=document.getElementById('light-open');
+  const light_video=document.getElementById('light-video');
+  const light_presentation=document.getElementById('light-presentation');
+  const light_song=document.getElementById('light-song');
+  const light_close=document.getElementById('light-close');
+  window.onscroll=function(){
+    if(inview(open)) return goto(light_open);
+    if(inview(video)) return goto(light_video);
+    if(inview(presentation)) return goto(light_presentation);
+    if(inview(song)) return goto(light_song);
+    if(inview(close)) return goto(light_close);
+  }
+</script>
 </html>
