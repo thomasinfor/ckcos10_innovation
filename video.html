@@ -32,25 +32,25 @@ html{scroll-behavior: smooth;}
   <h1>~成發回顧~</h1>
   <div id="open">
     <h3 class="title" id="open">開幕</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/QvsQ9hYKq7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="video">
     <h3 class="title">主題影片</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/VRWSAuzM0jI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="presentation">
     <h3 class="title" id="2f">化學、數學專題報告</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/w0AOGeqOnFY?list=RDMMw0AOGeqOnFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h3 class="title" id="4f">物理、資訊、生物專題報告</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/YziwCK2OiCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="song">
     <h3 class="title">成發曲</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/1q82twrdr0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="close">
     <h3 class="title">閉幕</h3>
-    <br><br><br><br><br><br><br><br><br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/vEvgUpqoaDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </center></body>
 <script>
@@ -81,5 +81,6 @@ html{scroll-behavior: smooth;}
     if(inview(song)) return goto(light_song);
     if(inview(close)) return goto(light_close);
   }
+  goto(light_open);
 </script>
 </html>
