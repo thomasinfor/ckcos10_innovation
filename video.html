@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>CKCOS10 Innovation</title>
+<title>Video | CKCOS10</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="./images/icon.png" type="image/x-icon">
@@ -16,7 +16,7 @@ html{scroll-behavior: smooth;}
 .navitem{display: block;float: left;width: 20%;transform: translateY(5px);}
 .navitem::after{content: '';position: absolute;width: 15px;height: 15px;background-color: white;border: 2px solid #FF9F55;top: 0;left: 50%;border-radius: 50%;transform: translate(-50%,-100%);transition: 0.5s;}
 .navitem.activate::after{content: '';position: absolute;width: 15px;height: 15px;background-color: #0f0;border: 2px solid #FF9F55;top: 0;left: 50%;border-radius: 50%;transform: translate(-50%,-100%);transition: 0.5s;}
-.navitem > a{text-decoration: none;}
+.navitem > a{text-decoration: none;cursor: pointer;}
 #navigation > hr{margin: 0px;border-top: 3px solid white;transform: translateY(-1px);}
 .title::before{content: "";height: 80px;display: block;}
 .block{min-height: 100vh;}
@@ -24,15 +24,15 @@ html{scroll-behavior: smooth;}
 <body><center>
   <div id="navigation">
     <hr>
-    <div id="light-open" class="navitem"><a href="#open" onclick="goto(this.parentElement);">開幕</div>
-    <div id="light-video" class="navitem"><a href="#video" onclick="goto(this.parentElement);">主題影片</a></div>
-    <div id="light-presentation" class="navitem"><a href="#presentation" onclick="goto(this.parentElement);">專題報告</a></div>
-    <div id="light-song" class="navitem"><a href="#song" onclick="goto(this.parentElement);">成發曲</a></div>
-    <div id="light-close" class="navitem"><a href="#close" onclick="goto(this.parentElement);">閉幕</a></div>
+    <div id="light-open" class="navitem"><a onclick="scrollto(open_);goto(this.parentElement);">開幕</div>
+    <div id="light-video" class="navitem"><a onclick="scrollto(video);goto(this.parentElement);">主題影片</a></div>
+    <div id="light-presentation" class="navitem"><a onclick="scrollto(presentation);goto(this.parentElement);">專題報告</a></div>
+    <div id="light-song" class="navitem"><a onclick="scrollto(song);goto(this.parentElement);">成發曲</a></div>
+    <div id="light-close" class="navitem"><a onclick="scrollto(close_);goto(this.parentElement);">閉幕</a></div>
   </div>
   <h1>~成發回顧~</h1>
   <div id="open" class="block">
-    <h3 class="title" id="open">開幕</h3>
+    <h3 class="title">開幕</h3>
     <iframe width="640" height="480" src="https://www.youtube.com/embed/QvsQ9hYKq7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="video" class="block">
@@ -65,23 +65,24 @@ html{scroll-behavior: smooth;}
   function inview(elem){
     return elem.getBoundingClientRect().bottom>65;
   };
-  const open=document.getElementById('open');
+  const open_=document.getElementById('open');
   const video=document.getElementById('video');
   const presentation=document.getElementById('presentation');
   const song=document.getElementById('song');
-  const close=document.getElementById('close');
+  const close_=document.getElementById('close');
   const light_open=document.getElementById('light-open');
   const light_video=document.getElementById('light-video');
   const light_presentation=document.getElementById('light-presentation');
   const light_song=document.getElementById('light-song');
   const light_close=document.getElementById('light-close');
+  function scrollto(ele){console.log(ele);ele.scrollIntoView();}
   window.onscroll=function(){
-    if(inview(open)) return goto(light_open);
+    if(inview(open_)) return goto(light_open);
     if(inview(video)) return goto(light_video);
     if(inview(presentation)) return goto(light_presentation);
     if(inview(song)) return goto(light_song);
-    if(inview(close)) return goto(light_close);
+    if(inview(close_)) return goto(light_close);
   }
-  goto(light_open);
+  goto(light_open); scrollto(open_);
 </script>
 </html>
