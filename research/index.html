@@ -10,21 +10,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-*{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;}
+*{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;word-wrap: break-word;}
 html{overflow-y: scroll;scroll-behavior: smooth;}
-.project{display: none;width: 100%;}
+.project{width: 100%;}
 .project-text{width: 90%;max-width: 600px;}
 .project-file{display: none;}
 .header{font-weight: 500;}
-.header::before{content: "";height: 10vh;display: block;}
+.header::before{content: "";height: 53px;display: block;}
 .subject{width: 12%;}
 .w3-button{transition-duration: 0.5s;}
 .home{background-color: #ccc; color: black; padding-left: 0; padding-right: 0;}
 .home:hover{transition-duration: 0.1s;font-weight: 1000;}
-#content{min-height: 100vh;background-color: white;}
+#content{min-height: 100vh;background-color: white;padding-top: 43px;}
 #pj0{background: url(../images/logo.png);background-position: center;background-repeat: no-repeat;background-size: contain;width: 100%;min-height: 100%;}
+#content > center > div{display: none;width: 95%;max-width: 650px;}
 .pdfbutton{font-family: consolas;margin: 15px;}
 .intro{text-align: left;}
+.subject-intro
 </style>
 </head>
 <body onresize="resize()">
@@ -68,9 +70,9 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
 </div>
 <!-- projects -->
 <div id="content"><center>
-  <div id="pj0">
-    <img src="https://pbs.twimg.com/media/DH9O-0KW0AEfV3l.jpg">
-  </div>
+  <div><div id="pj0">
+    <!-- <img src="https://pbs.twimg.com/media/DH9O-0KW0AEfV3l.jpg"> -->
+  </div></div>
   <div id="math"></div>
   <div id="physics"></div>
   <div id="chemistry"></div>
@@ -81,7 +83,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
         <h1 class="header">以人工智慧技術開發自動配音效系統</h1>
         <p style="text-align: right;">作者：王勻、林尚廷、蕭梓宏<br>指導教授：陽明大學 陳麗芬教授</p>
         <h5 class="intro">　　近日網路發達，影片的流通更為便利，但為影片加上適當的音效往往需要耗費許多人力與時間資源。本研究旨在研究利用人工智慧深度網路技術訓練模型，並期望訓練後的模型能為當下影片的內容配上適當的音效，使得幫影片配音的過程可以加速，並減少人力需求。本研究主要利用 Keras 這個 Python 套件創建模型，並參考 ResNet 這個著名的深度學習模型，透過大量已標記圖片當作訓練資料，並進一步修改模型的架構，使準確率得到提升。研究結果符合預期，能在適合的類別中為影片配上合理的音效。</h5>
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
       <div>
         <h4>
@@ -106,30 +108,19 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
       </div>
     </div>
   </div>
-  <div id="test">
-  </div>
 </center></div>
-<!-- footer -->
-<div id="footer" class="w3-container w3-teal" style="display: none;">
-  <h5>Designed By < nocodenolife ></h5>
-</div>
 <script type="text/javascript" src="./project.js"></script>
 <script>
   // navigation
-  document.getElementById('list').innerHTML=document.getElementById('subjects').innerHTML;
   const lst=document.getElementById('list');
+  lst.innerHTML=document.getElementById('subjects').innerHTML;
   var t;
   function toggle(x){
-    if(x.style.display=='block') x.style.display='none';
-    else x.style.display='block';
+    if(x.style.display=='none') x.style.display='block';
+    else x.style.display='none';
   }
   // content size
-  const con=document.getElementById('content');
-  const nav=document.getElementById('navigation');
-  const ftr=document.getElementById('footer');
   resize=()=>{
-    con.style.paddingTop=nav.offsetHeight+'px';
-    con.style.paddingBottom=ftr.offsetHeight+'px';
     lst.style.display='none';
   }
   resize();
@@ -138,12 +129,9 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   function show(id){
     if(last==id) id='pj0';
     window.location.hash=(id=='pj0'?'':id);
-    // if(last!='pj0'&&id=='pj0') window.location.assign(window.location.href.split('#')[0]);
-    document.getElementById(last).style.display='none';
-    document.getElementById(id).style.display='inline-block';
-    if(last=='pj0') ftr.classList.remove('w3-bottom');
+    document.getElementById(last).parentElement.style.display='none';
+    document.getElementById(id).parentElement.style.display='inline-block';
     last=id;
-    if(last=='pj0') ftr.classList.add('w3-bottom');
   }
   // pdfbuuton
   function pdfbutton(x){
@@ -159,7 +147,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   // initial url
   var id=decodeURI(window.location.hash).slice(1);
   if(document.getElementById(id)&&document.getElementById(id).classList.contains('project'))
-    show(id),toggle(lst);
+    show(id);
   else
     show('pj0');
   resize();
