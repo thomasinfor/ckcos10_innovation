@@ -13,9 +13,9 @@
 *{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;word-wrap: break-word;}
 html{overflow-y: scroll;scroll-behavior: smooth;}
 .project{width: 100%;}
-.project-text{width: 90%;max-width: 600px;}
+.project-text{width: 90%;max-width: 600px;text-align: left;}
 .project-file{display: none;}
-.header{font-weight: 500;}
+.header{font-weight: 500;text-align: center;}
 .header::before{content: "";height: 53px;display: block;}
 .subject{width: 12%;}
 .w3-button{transition-duration: 0.5s;}
@@ -26,7 +26,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
 #content > center > div{display: none;width: 95%;max-width: 650px;}
 .pdfbutton{font-family: consolas;margin: 15px;}
 .intro{text-align: left;}
-.subject-intro
+.w3-bar-block > .w3-bar-item{background-color: #eee;}
 </style>
 </head>
 <body onresize="resize()">
@@ -39,33 +39,34 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
       <div></div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">數學</button>
-        <div id="math-btn" class="w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="math-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">物理</button>
-        <div id="physics-btn" class="w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="physics-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">化學</button>
-        <div id="chemistry-btn" class="w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="chemistry-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">生物</button>
-        <div id="biology-btn" class="w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="biology-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">地科</button>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <button class="w3-button" style="width: 100%">資訊</button>
-        <div id="information-btn" class="w3-dropdown-content w3-bar-block w3-card-4">
+        <div class="information-btn w3-dropdown-content w3-bar-block w3-card-4">
           <a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">以人工智慧技術開發自動配音效系統</a>
         </div>
       </div>
     </div>
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggle(lst)">&#9776;</a>
     <a href="https://www.instagram.com/ckcos10_innovation/" target="_blank" class="w3-button w3-bar-item w3-right"><i class="fa fa-instagram" style='font-size:20px'></i></a>
-    <div id="list" class="w3-hide-large w3-hide-medium" style="display: none"></div>
+    <div id="list" class="w3-hide-large w3-hide-medium" style="display: none">
+    </div>
   </div>
 </div>
 <!-- projects -->
@@ -114,7 +115,6 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   // navigation
   const lst=document.getElementById('list');
   lst.innerHTML=document.getElementById('subjects').innerHTML;
-  var t;
   function toggle(x){
     if(x.style.display=='none') x.style.display='block';
     else x.style.display='none';
@@ -125,12 +125,29 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   }
   resize();
   // project button
+  function toggle_subject_btn(x){
+    console.log(x);
+    console.log(document.getElementsByClassName(x+'-btn')[0].previousSibling.previousSibling);
+    var ele=document.getElementsByClassName(x+'-btn')[0].previousSibling.previousSibling;
+    console.log(ele.style.backgroundColor);
+    if(ele.style.backgroundColor!='white')
+      ele.style.backgroundColor='white',ele.style.color='black';
+    else
+      ele.style.backgroundColor='initial',ele.style.color='inherit';
+  }
   var last='pj0';
   function show(id){
-    if(last==id) id='pj0';
+    if(last==id) return;
+    var a=document.getElementById(last).parentElement,b=document.getElementById(id).parentElement;
+    if(a!=b){
+      a.style.display='none';
+      b.style.display='inline-block';
+      if(a.attributes.id!=undefined)
+        toggle_subject_btn(a.attributes.id.value);
+      if(b.attributes.id!=undefined)
+        toggle_subject_btn(b.attributes.id.value);
+    }
     window.location.hash=(id=='pj0'?'':id);
-    document.getElementById(last).parentElement.style.display='none';
-    document.getElementById(id).parentElement.style.display='inline-block';
     last=id;
   }
   // pdfbuuton

@@ -37,6 +37,7 @@ function project(data){
 var example=[
   {
     subject: "information",
+    intro: "this is an intriduction to this subject.",
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
@@ -60,6 +61,7 @@ var example=[
   },
   {
     subject: "chemistry",
+    intro: "this is an intriduction to this subject.",
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
@@ -70,6 +72,7 @@ var example=[
   },
   {
     subject: "physics",
+    intro: "this is an intriduction to this subject.",
     projects: [
       {
         member: "李秉叡",
@@ -88,7 +91,8 @@ function process(data){
       btnlst+=`<a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">${j.title}</a>`;
     }
     document.getElementById(i.subject).innerHTML=content;
-    document.getElementById(i.subject+'-btn').innerHTML=btnlst;
+    for(j of document.getElementsByClassName(i.subject+'-btn'))
+      j.innerHTML=btnlst;
   }
 }
 process(example);

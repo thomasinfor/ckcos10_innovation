@@ -83,6 +83,6 @@ html{scroll-behavior: smooth;}
     if(inview(song)) return goto(light_song);
     if(inview(close_)) return goto(light_close);
   }
-  goto(light_open); scrollto(open_);
+  goto(light_open); window.scrollTo(0,0);
 </script>
 </html>
