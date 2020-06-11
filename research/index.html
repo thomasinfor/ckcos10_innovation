@@ -80,37 +80,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   <div class="subject-block" id="physics"></div>
   <div class="subject-block" id="chemistry"></div>
   <div class="subject-block" id="biology"></div>
-  <div class="subject-block" id="information">
-    <div class="project" id="以人工智慧技術開發自動配音效系統">
-      <div class="project-text">
-        <h1 class="header">以人工智慧技術開發自動配音效系統</h1>
-        <p style="text-align: right;">作者：王勻、林尚廷、蕭梓宏<br>指導教授：陽明大學 陳麗芬教授</p>
-        <h5 class="intro">　　近日網路發達，影片的流通更為便利，但為影片加上適當的音效往往需要耗費許多人力與時間資源。本研究旨在研究利用人工智慧深度網路技術訓練模型，並期望訓練後的模型能為當下影片的內容配上適當的音效，使得幫影片配音的過程可以加速，並減少人力需求。本研究主要利用 Keras 這個 Python 套件創建模型，並參考 ResNet 這個著名的深度學習模型，透過大量已標記圖片當作訓練資料，並進一步修改模型的架構，使準確率得到提升。研究結果符合預期，能在適合的類別中為影片配上合理的音效。</h5>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
-      <div>
-        <h4>
-          <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton" onclick="pdfbutton(this);">Show PDF</div><div class="w3-dropdown-hover">
-            <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton">Download</div>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a class="w3-bar-item w3-button" href="./files/research.pdf" download="作品說明書.pdf">作品說明書</a>
-              <a class="w3-bar-item w3-button" href="./files/展板.pdf" download="海報.pdf">海報</a>
-            </div>
-          </div>
-        </h4>
-        <div class="project-file">
-          <div class="w3-row">
-            <div class="w3-col s12 m12 l6">
-              <iframe src="./files/research.pdf#toolbar=0" width="100%" height="400px"></iframe>
-            </div>
-            <div class="w3-col s12 m12 l6">
-              <iframe src="./files/展板.pdf#toolbar=0" width="100%" height="400px"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="subject-block" id="information"></div>
 </center></div>
 <script type="text/javascript" src="./project.js"></script>
 <script>
@@ -128,10 +98,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   resize();
   // project button
   function toggle_subject_btn(x){
-    console.log(x);
-    console.log(document.getElementsByClassName(x+'-btn')[0].previousSibling.previousSibling);
     var ele=document.getElementsByClassName(x+'-btn')[0].previousSibling.previousSibling;
-    console.log(ele.style.backgroundColor);
     if(ele.style.backgroundColor!='white')
       ele.style.backgroundColor='white',ele.style.color='black';
     else
@@ -139,7 +106,6 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   }
   var last=document.getElementById('pj0').parentElement;
   function show(id){
-    console.log(id);
     var now=document.getElementById(id);
     if(!now.classList.contains('subject-block'))
       now=now.parentElement;
@@ -168,7 +134,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   }
   // initial url
   var id=decodeURI(window.location.hash).slice(1);
-  if(document.getElementById(id)&&document.getElementById(id).classList.contains('project'))
+  if(document.getElementById(id)&&(document.getElementById(id).classList.contains('project')||document.getElementById(id).classList.contains('subject-block')))
     show(id);
   else
     show('pj0');

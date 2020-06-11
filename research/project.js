@@ -14,7 +14,7 @@ function project(data){
       <div>
         <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton" onclick="pdfbutton(this);">Show PDF</div>
         <div class="project-file" style="display: none;">
-          ${data.ppt}
+          <!-- ${data.ppt} -->
         </div>
       </div>
     </div>`;
@@ -22,7 +22,7 @@ function project(data){
 var example=[
   {
     subject: "math",
-    intro: "this is an intriduction to this subject.",
+    intro: "this is an introduction to this subject.",
     projects: [
       {
         member: "yoda",
@@ -35,7 +35,7 @@ var example=[
   },
   {
     subject: "physics",
-    intro: "this is an intriduction to this subject.",
+    intro: "this is an introduction to this subject.",
     projects: [
       {
         member: "李秉叡",
@@ -48,7 +48,7 @@ var example=[
   },
   {
     subject: "chemistry",
-    intro: "this is an intriduction to this subject.",
+    intro: "this is an introduction to this subject.",
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
@@ -60,7 +60,7 @@ var example=[
   },
   {
     subject: "biology",
-    intro: "this is an intriduction to this subject.",
+    intro: "this is an introduction to this subject.",
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
@@ -72,7 +72,7 @@ var example=[
   },
   {
     subject: "information",
-    intro: "this is an intriduction to this subject.",
+    intro: "<h1>this is an introduction to this subject.</h1>",
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
@@ -93,12 +93,13 @@ var example=[
 function process(data){
   for(var i of data){
     var content='',btnlst='';
+    content+=i.intro;
     for(var j of i.projects){
       content+=project(j);
       btnlst+=`<a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">${j.title}</a>`;
     }
     document.getElementById(i.subject).innerHTML=content;
-    for(j of document.getElementsByClassName(i.subject+'-btn'))
+    for(var j of document.getElementsByClassName(i.subject+'-btn'))
       j.innerHTML=btnlst;
   }
 }
