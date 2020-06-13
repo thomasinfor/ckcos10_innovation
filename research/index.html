@@ -25,10 +25,12 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
 #pj0{background: url(../images/logo.png);background-position: center;background-repeat: no-repeat;background-size: contain;width: 100%;min-height: 100%;}
 #content > center > div{display: none;width: 95%;max-width: 650px;}
 .pdfbutton{font-family: consolas;margin: 15px;}
-.intro{text-align: left;}
+.intro{text-align: left;text-indent: 2em;}
 .w3-bar-block > .w3-bar-item{background-color: #eee;}
 .w3-dropdown-hover > .w3-button{width: 100%;}
 .subject-block::before{content: "";height: 53px;display: block;}
+figure{margin: 1em 0;padding: 0 20px;border-left: 3px solid #ddd;}
+figure > img{margin-bottom: 10px;}
 </style>
 </head>
 <body onresize="resize()">
@@ -41,27 +43,26 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
       <div></div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button" onclick="show('math');">數學</div>
-        <div class="math-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="math-btn w3-dropdown-content w3-bar-block"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button" onclick="show('physics');">物理</div>
-        <div class="physics-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="physics-btn w3-dropdown-content w3-bar-block"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button" onclick="show('chemistry');">化學</div>
-        <div class="chemistry-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="chemistry-btn w3-dropdown-content w3-bar-block"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button" onclick="show('biology');">生物</div>
-        <div class="biology-btn w3-dropdown-content w3-bar-block w3-card-4"></div>
+        <div class="biology-btn w3-dropdown-content w3-bar-block"></div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button">地科</div>
       </div>
       <div class="w3-dropdown-hover w3-mobile subject">
         <div class="w3-button" onclick="show('information');">資訊</div>
-        <div class="information-btn w3-dropdown-content w3-bar-block w3-card-4">
-          <a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">以人工智慧技術開發自動配音效系統</a>
+        <div class="information-btn w3-dropdown-content w3-bar-block">
         </div>
       </div>
     </div>
@@ -82,6 +83,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
   <div class="subject-block" id="biology"></div>
   <div class="subject-block" id="information"></div>
 </center></div>
+<script type="text/javascript" src="./data.js"></script>
 <script type="text/javascript" src="./project.js"></script>
 <script>
   // navigation
