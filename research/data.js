@@ -137,7 +137,7 @@ var data=[
     projects: [
       {
         member: "王勻 林尚廷 蕭梓宏",
-        professor: "陽明大學 陳麗芬教授",
+        professor: "陽明大學 陳麗芬",
         title: "以人工智慧技術開發自動配音效系統",
         intro: `<h5 class="intro">現今網路發達,上傳影片人人都可輕鬆做到,唯影片的音效後製卻是眾所皆知的麻煩。本研究著重於將人工智慧應用在影片的音效後製、設計演算法使電腦能自動選擇音效搭配。</h5><h5 class="intro">在整個演算法當中,我們先以現成 Python 套件將影片的所有畫面一一擷下。接著透過深度殘差神經網路——以捲積神經網路為基礎優化的模型,分析影片中的畫面,得出連續畫面的特徵及相關性。最終以自行設計的演算法,根據上述特徵自動搭配音效。</h5><h5 class="intro">其中神經網路的訓練,我們以自動化方式蒐集適量訓練資料,並藉遷移學習的技術快速達到近 90% 的精確度。</h5><figure><img src="../images/research-1,10,28.png" style="width: 500px;"><figcaption>演算法流程圖</figcaption></figure>`,
         ppt: `<iframe src="https://onedrive.live.com/embed?cid=24AC57FC109740EC&amp;resid=24AC57FC109740EC%219447&amp;authkey=AETD8EojVCuH23k&amp;em=2&amp;wdAr=1.7777777777777777" frameborder="0" style="width: 90vw;height: 54vw;max-width: 600px;max-height: 360px;"></iframe>`
