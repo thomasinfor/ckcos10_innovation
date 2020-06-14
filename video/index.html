@@ -3,7 +3,7 @@
 <title>Video | CKCOS10</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="./images/icon.png" type="image/x-icon">
+<link rel="icon" href="../images/icon.png" type="image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC">
@@ -19,7 +19,7 @@ html{scroll-behavior: smooth;}
 .navitem > a{text-decoration: none;cursor: pointer;}
 #navigation > hr{margin: 0px;border-top: 3px solid white;transform: translateY(-1px);}
 .title::before{content: "";height: 80px;display: block;}
-.block{min-height: 100vh;}
+.block{width: 95vw;min-height: 100vh;margin: 30px 0;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
 </style>
 <body><center>
   <div id="navigation">
@@ -37,13 +37,25 @@ html{scroll-behavior: smooth;}
   </div>
   <div id="video" class="block">
     <h3 class="title">主題影片</h3>
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/VRWSAuzM0jI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/uPY2utqWAfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div id="presentation" class="block">
-    <h3 class="title" id="2f">化學、數學專題報告</h3>
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/w0AOGeqOnFY?list=RDMMw0AOGeqOnFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h3 class="title" id="4f">物理、資訊、生物專題報告</h3>
-    <iframe width="640" height="480" src="https://www.youtube.com/embed/YziwCK2OiCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="block">
+      <h3 class="title" id="2f-1">二樓上半場化學、數學專題報告</h3>
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/w0AOGeqOnFY?list=RDMMw0AOGeqOnFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="block">
+      <h3 class="title" id="2f-2">二樓下半場數學專題報告</h3>
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/w0AOGeqOnFY?list=RDMMw0AOGeqOnFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="block">
+      <h3 class="title" id="4f">四樓上半場物理、資訊專題報告</h3>
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/m7TnuxHVCKc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="block">
+      <h3 class="title" id="4f">四樓下半場資訊專題報告</h3>
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/qbfl6GHBYVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
   <div id="song" class="block">
     <h3 class="title">成發曲</h3>

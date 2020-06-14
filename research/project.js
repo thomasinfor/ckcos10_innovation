@@ -9,7 +9,7 @@ function tohtml(x){
 }
 function project(data){
   return `
-    <div class="project" id="${tohtml(data.title)}">
+    <div class="project w3-card" id="${tohtml(data.title)}">
       <div class="project-text">
         <h2 class="header">${tohtml(data.title)}</h2>
         <p style="text-align: right;">${people(data)}</p>

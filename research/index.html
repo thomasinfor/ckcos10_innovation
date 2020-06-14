@@ -12,7 +12,7 @@
 <style>
 *{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;max-height: 100%;word-wrap: break-word;}
 html{overflow-y: scroll;scroll-behavior: smooth;}
-.project{width: 100%;}
+.project{width: 100%;margin: 30px 0;}
 .project-text{width: 90%;max-width: 600px;text-align: left;}
 .project-file{display: none;}
 .header{font-weight: 500;text-align: center;}
@@ -31,13 +31,14 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
 .subject-block::before{content: "";height: 53px;display: block;}
 figure{margin: 1em 0;padding: 0 20px;border-left: 3px solid #ddd;}
 figure > img{margin-bottom: 10px;}
+.w3-col.s12.m5.l5{padding: 20px 10px;}
 </style>
 </head>
 <body onresize="resize()">
 <!-- navigation -->
 <div id="navigation" class="w3-top">
   <div class="w3-bar w3-teal w3-large">
-    <a href="../index.html" class="w3-bar-item w3-button w3-hide-small home" style="width: 17%;padding-left: 0px;padding-right: 0px;">Innovation</a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-hide-small home" style="width: 17%;padding-left: 0px;padding-right: 0px;position: relative;">Innovation</a>
     <a href="../index.html" class="w3-bar-item w3-button w3-hide-large w3-hide-medium home" style="width: 50%;">Innovation</a>
     <div class="w3-hide-small" id="subjects">
       <div></div>
@@ -77,11 +78,82 @@ figure > img{margin-bottom: 10px;}
   <div><div id="pj0">
     <!-- <img src="https://pbs.twimg.com/media/DH9O-0KW0AEfV3l.jpg"> -->
   </div></div>
-  <div class="subject-block" id="math"></div>
-  <div class="subject-block" id="physics"></div>
-  <div class="subject-block" id="chemistry"></div>
-  <div class="subject-block" id="biology"></div>
-  <div class="subject-block" id="information"></div>
+  <div class="subject-block" id="math">
+    <div class="w3-row w3-card">
+      <h1>數學組</h1>
+      <div class="w3-col s12 m7 l7">
+        <div class="">
+          <div class="w3-container">
+            <h4 style="text-align: left;">尤貴弘老師的話：</h4>
+            <p class="intro">做專題的過程是辛苦的，從找題目、讀參考資料、思考處理問題的方法到完成報告，每一個過程都需要花很多的時間。也許還會遇到題目沒有進展，重新找題目的情形。但是這樣的過程是重要的，特別是科學班的各位同學，將來有很大的機會繼續做研究，而這樣的經驗可以讓同學不斷地提升研究的能量，不論目前得到的研究成果是否突出，同學只要能認真的付出，就能從中學到東西。接下來要做的，就是將自己的成果好好地展現給每一位關心的人，盡力在成果發表會完美呈現，完成高中階段的一項重要成就。祝同學們成果發表會順利完成，且能帶著這一年多的經驗繼續往前邁進。</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m5 l5"><img src="../images/math_teacher.png" style="width: 300px;"></div>
+    </div>
+  </div>
+  <div class="subject-block" id="physics">
+    <div class="w3-row w3-card">
+      <h1>物理組</h1>
+      <div class="w3-col s12 m7 l7">
+        <div class="">
+          <div class="w3-container">
+            <h4 style="text-align: left;">何宣螢老師的話：</h4>
+            <p class="intro">恭喜第十屆科學班可愛的你們，努力了一年多，終於來到這個專屬於你們的畢業典禮，即便是今年有疫情的影響無法盛大舉辦，仍然感受到你們的籌畫活動的細膩與用心。</p>
+            <p class="intro">恭喜超級樂天物理組，每次專題時間都看不出來在做什麼，目測是在打電動、亂玩擺在實驗室的器材（干你們什麼事？）、把實驗室變成毒氣室……，但每每我暗自擔心「這樣真的可以嗎？」的時候，你們卻也總能生出像樣的進度，感覺得到你們各自對專題的想法與創新，就這樣一路順利參加了科展、來到成發的這一天。</p>
+            <p class="intro">物理組的大家題目五花八門，共通點大概是 :都不是很物理 ! 這個過程謝謝其他組同學對我們的幫忙，謝謝各組的指導教授百忙之中仍然鼎力相助、提供各種資源與寶貴意見，謝謝實驗室洪宜錚小姐對失控物理組的寬容與幫助。</p>
+            <p class="intro">最後的最後，如此跌跌撞撞的過程，你們仍然盡力找尋解決問題的可能、找尋符合你們需求的資訊或方向，走到這一步，我很為你們驕傲，真的。</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m5 l5"><img src="../images/physics_teacher.png" style="width: 270px;"></div>
+    </div>
+  </div>
+  <div class="subject-block" id="chemistry">
+    <div class="w3-row w3-card">
+      <h1>化學組</h1>
+      <div class="w3-col s12 m7 l7">
+        <div class="">
+          <div class="w3-container">
+            <h4 style="text-align: left;">柯淑惠老師的話：</h4>
+            <p class="intro">經過一年半的「專題研究」洗禮，相信同學們應該感受到這門課有別於其他課程的訓練，從開始搜尋自己喜歡的研究議題、大量的閱讀相關文獻、動手做實驗、整理數據、討論說明、將報告撰寫成科展說明書、參加北市科展競賽、製作成 ppt 並上台報告……。雖然這過程很辛苦，但相信同學也收穫滿滿！成發的結束，並不代表專題研究的終點，希望同學們能繼續保持對研究的熱忱，在各領域繼續創新研究，並開創自己不凡且精彩的人生！</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m5 l5"><img src="../images/chemistry_teacher.png" style="width: 200px;"></div>
+    </div>
+  </div>
+  <div class="subject-block" id="biology">
+    <div class="w3-row w3-card">
+      <h1>生物組</h1>
+      <div class="w3-col s12 m7 l7">
+        <div class="">
+          <div class="w3-container">
+            <h4 style="text-align: left;">劉玉山老師的話：</h4>
+            <p class="intro">我很高興，這次的生專同學：駿騏、宇晨、篆逸、昱全、賢傳與家杰與我關係都很親近。他們有些人將來是要往工科發展，選擇生物專題只是為了興趣，光是這點就令人激賞。更值得欣慰的是，從尋找研究室、研究主題的選定、實驗方法與原理討論，無中生有的科展報告到成發的 ppt 製作，同學們都能了解老師的用心，那就是專題研究的課程安排，並不是要你們獲致偉大的實驗結果，也不只是在科學展覽等競賽中拿到好的成績，而是要你們學習在遭遇困難時，能樂觀以對並試圖解決困難，能夠耐心並按部就班地完成一個看似不起眼的科學探究，了解科學的方法以及培養正確的科學態度，能夠上台有條有理地介紹你的研究心得，嘗試地將你對科學的熱愛感染給其他人。</p>
+            <p class="intro">我說過這個年紀進實驗室是令人憂喜參半的，值得擔憂的是，可能在沒有做好準備下，在經歷科學研究的困難與孤獨後，從此成為科學研究的逃兵，喜的是，早一點一嘗苦盡甘來的喜悅，以及體會成熟圓融的心智提升。如今，看到大家在台上演示時意氣風發的神情，當初擔心的心情早已煙消雲散了。衷心感謝中研院謝清河研究員、北醫鄭柏青和郭泰志教授、台大王振泰教授以及實驗室學長姊們無怨無悔的辛勤指導。很特別的是，這一次 COVID-19 疫情雖然使許多同學的研究中斷，但也更讓我們了解生物醫學研究的重要性，願六位同學成發順利，將來畢業後在各個不同的科學領域都能發光發熱！</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m5 l5"><img src="../images/biology_teacher.png" style="width: 250px;"></div>
+    </div>
+  </div>
+  <div class="subject-block" id="information">
+    <div class="w3-row w3-card">
+      <h1>資訊組</h1>
+      <div class="w3-col s12 m7 l7">
+        <div class="">
+          <div class="w3-container">
+            <h4 style="text-align: left;">林淑玲老師的話：</h4>
+            <p class="intro">記得那時才開學一個月左右，有幾位剛上高一的同學說想借用電腦教室自組資訊讀書會，我當然是樂觀其成了。之後每週二晚上的資讀，從同學間的切磋發展到學長學弟間的傳承，持續至今。後來資訊專題課程中，從找研究方向、尋求教授指導、專題製作，到參加科展，過程縱然有些小波折，最終也順利完成。</p>
+            <p class="intro">對我而言，優秀的資訊組同學就像進入了「深度學習」模式，都能自發的主動學習，極少有讓老師手調參數的機會，不論競賽成績或專題研究，最後都有很棒的達成率。優異表現的背後不只是天賦，更多的是不懈怠的努力。熱心不藏私的團體學習，可以帶來最大的進步，也能透過這個過程找到人生的好夥伴。</p>
+            <p class="intro">不能免俗，結語要給點建議與同學共勉。期許在做人做事做學問的道路上，秉持此刻最單純的心，我們誠實不作假，熱情前進！</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m5 l5"><img src="../images/information_teacher.png"></div>
+    </div>
+  </div>
 </center></div>
 <script type="text/javascript" src="./data.js"></script>
 <script type="text/javascript" src="./project.js"></script>
@@ -126,11 +198,11 @@ figure > img{margin-bottom: 10px;}
   // pdfbuuton
   function pdfbutton(x){
     toggle(x.nextElementSibling);
-    if(x.innerHTML=='Show PDF'){
-      x.innerHTML='Hide PDF';
+    if(x.innerHTML=='Show PPT'){
+      x.innerHTML='Hide PPT';
       x.style.backgroundColor="#ccc";
     }else{
-      x.innerHTML='Show PDF';
+      x.innerHTML='Show PPT';
       x.style.backgroundColor="#fff";
     }
   }
