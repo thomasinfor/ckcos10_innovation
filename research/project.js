@@ -31,11 +31,11 @@ function process(data){
     for(var j of i.projects){
       content+=project(j);
       btnlst+=`<a class="w3-bar-item w3-button" onclick="show(this.text);">${j.title}</a>`;
-      btnlst2+=`<a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);">${j.title}</a>`;
+      btnlst2+=`<a class="w3-bar-item w3-button" onclick="show(this.text);toggle(lst);mobile_show(null);">${j.title}</a>`;
     }
     document.getElementById(i.subject).innerHTML+=content;
-    document.getElementById(i.subject+'-btn').innerHTML=btnlst;
-    document.getElementById(i.subject+'-btn-mobile').innerHTML=btnlst2;
+    document.getElementById(i.subject+'-btn').innerHTML+=btnlst;
+    document.getElementById(i.subject+'-btn-mobile').innerHTML+=btnlst2;
   }
 }
 process(data);

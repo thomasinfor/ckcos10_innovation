@@ -37,14 +37,15 @@ figure{margin: 1em 0;padding: 0 20px;border-left: 3px solid #ddd;}
 figure > img{margin-bottom: 10px;}
 .w3-col.s12.m5.l5{padding: 20px 10px;}
 .dropdown-content{display: block;color: black;}
+#pj0 > .w3-display-middle > .w3-button{margin: 2vh 0;padding-left: 5vw;padding-right: 5vw;font-size: 4vh;border-radius: 1vw;}
 </style>
 </head>
 <body onresize="resize()">
 <!-- navigation -->
 <div id="navigation" class="w3-top">
   <div class="w3-bar w3-teal w3-large">
-    <a href="../index.html" class="w3-bar-item w3-button w3-hide-small home" style="width: 17%;padding-left: 0px;padding-right: 0px;position: relative;">Innovation</a>
-    <a href="../index.html" class="w3-bar-item w3-button w3-hide-large w3-hide-medium home" style="width: 50%;">Innovation</a>
+    <a href="../" class="w3-bar-item w3-button w3-hide-small home" style="width: 17%;padding-left: 0px;padding-right: 0px;position: relative;">Innovation</a>
+    <a href="../" class="w3-bar-item w3-button w3-hide-large w3-hide-medium home" style="width: 50%;">Innovation</a>
     <div class="w3-hide-small" id="subjects">
       <div></div>
       <div class="w3-dropdown-hover subject">
@@ -64,7 +65,7 @@ figure > img{margin-bottom: 10px;}
         <div id="biology-btn" class="w3-dropdown-content w3-bar-block"></div>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button">地科</div>
+        <a class="w3-button" href="https://youtu.be/m7TnuxHVCKc?t=3709" target="_blank">地科</a>
       </div>
       <div class="w3-dropdown-hover subject">
         <div class="w3-button" onclick="show('information');">資訊</div>
@@ -78,36 +79,52 @@ figure > img{margin-bottom: 10px;}
     <div id="list" class="w3-hide-large w3-hide-medium" style="display: none">
       <div></div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button" onclick="mobile_show('math');show('math');">數學</div>
+        <div class="w3-button" onclick="mobile_show('math');">數學</div>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button" onclick="mobile_show('physics');show('physics');">物理</div>
+        <div class="w3-button" onclick="mobile_show('physics');">物理</div>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button" onclick="mobile_show('chemistry');show('chemistry');">化學</div>
+        <div class="w3-button" onclick="mobile_show('chemistry');">化學</div>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button" onclick="mobile_show('biology');show('biology');">生物</div>
+        <div class="w3-button" onclick="mobile_show('biology');">生物</div>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button">地科</div>
+        <a class="w3-button" href="https://youtu.be/m7TnuxHVCKc?t=3709" target="_blank">地科</a>
       </div>
       <div class="w3-dropdown-hover subject">
-        <div class="w3-button" onclick="mobile_show('information');show('information');">資訊</div>
+        <div class="w3-button" onclick="mobile_show('information');">資訊</div>
       </div>
-      <div id="math-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;"></div>
-      <div id="physics-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;"></div>
-      <div id="chemistry-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;"></div>
-      <div id="biology-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;"></div>
+      <div id="math-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;">
+        <a class="w3-bar-item w3-button" onclick="show('math');">尤貴弘老師的話</a>
+      </div>
+      <div id="physics-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;">
+        <a class="w3-bar-item w3-button" onclick="show('physics');">何宣螢老師的話</a>
+      </div>
+      <div id="chemistry-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;">
+        <a class="w3-bar-item w3-button" onclick="show('chemistry');">柯淑惠老師的話</a>
+      </div>
+      <div id="biology-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;">
+        <a class="w3-bar-item w3-button" onclick="show('biology');">劉玉山老師的話</a>
+      </div>
       <div></div>
-      <div id="information-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;"></div>
+      <div id="information-btn-mobile" class="dropdown-content w3-bar-block" style="display: none;">
+        <a class="w3-bar-item w3-button" onclick="show('information');">林淑玲老師的話</a>
+      </div>
     </div>
   </div>
 </div>
 <!-- projects -->
 <div id="content"><center>
   <div><div id="pj0">
-    <!-- <img src="https://pbs.twimg.com/media/DH9O-0KW0AEfV3l.jpg"> -->
+    <div class="w3-display-middle">
+      <div class="w3-button w3-teal" onclick="show('math');mobile_show(null);">數學組</div><br>
+      <div class="w3-button w3-teal" onclick="show('physics');mobile_show(null);">物理組</div><br>
+      <div class="w3-button w3-teal" onclick="show('chemistry');mobile_show(null);">化學組</div><br>
+      <div class="w3-button w3-teal" onclick="show('biology');mobile_show(null);">生物組</div><br>
+      <div class="w3-button w3-teal" onclick="show('information');mobile_show(null);">資訊組</div>
+    </div>
   </div></div>
   <div class="subject-block" id="math">
     <div class="w3-row w3-card">
@@ -209,7 +226,6 @@ figure > img{margin-bottom: 10px;}
     else
       ele.style.backgroundColor='initial',ele.style.color='inherit';
     ele=document.getElementById(x+'-btn-mobile').previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
-    console.log(ele)
     if(!ele.style) ele.style='';
     if(ele.style.backgroundColor!='white')
       ele.style.backgroundColor='white',ele.style.color='black';
@@ -218,7 +234,6 @@ figure > img{margin-bottom: 10px;}
   }
   var last=document.getElementById('pj0').parentElement;
   function show(id){
-    console.log(id);
     var now=document.getElementById(id);
     if(!now.classList.contains('subject-block'))
       now=now.parentElement;
@@ -238,17 +253,17 @@ figure > img{margin-bottom: 10px;}
   function mobile_show(x){
     if(x==mobile_last) return;
     if(mobile_last) toggle(document.getElementById(mobile_last+'-btn-mobile'));
-    toggle(document.getElementById(x+'-btn-mobile'));
+    if(x) toggle(document.getElementById(x+'-btn-mobile'));
     mobile_last=x;
   }
   // pdfbuuton
   function pdfbutton(x){
     toggle(x.nextElementSibling.nextElementSibling.nextElementSibling);
-    if(x.innerHTML=='Show PPT'){
-      x.innerHTML='Hide PPT';
+    if(x.innerHTML=='Show Slides'){
+      x.innerHTML='Hide Slides';
       x.style.backgroundColor="#ccc";
     }else{
-      x.innerHTML='Show PPT';
+      x.innerHTML='Show Slides';
       x.style.backgroundColor="#fff";
     }
   }

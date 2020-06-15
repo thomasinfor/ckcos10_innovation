@@ -20,6 +20,7 @@ html{scroll-behavior: smooth;}
 #navigation > hr{margin: 0px;border-top: 3px solid white;transform: translateY(-1px);}
 .title::before{content: "";height: 80px;display: block;}
 .block{width: 95vw;min-height: 100vh;margin: 30px 0;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
+.w3-row > .w3-col > div::-webkit-scrollbar{display: none;}
 </style>
 <body><center>
   <div id="navigation">
@@ -59,7 +60,57 @@ html{scroll-behavior: smooth;}
   </div>
   <div id="song" class="block">
     <h3 class="title">成發曲</h3>
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/1q82twrdr0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="w3-row">
+      <div class="w3-col s12 m6 l7 w3-cell-middle w3-mobile" style="padding: 20px;">
+        <iframe width="400" height="240" src="https://www.youtube.com/embed/1q82twrdr0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="w3-col s12 m6 l5 w3-cell-middle w3-mobile" style="padding: 20px;">
+        <div style="border: 2px solid #ccc;overflow-y: scroll;max-height: 240px;">
+          <p>
+            風箏往 雲與晨曦 飛去了<br>
+            轉一圈 逐漸展開 新旅程<br>
+            引天邊 的 雨水 澆灌虹 的 養分<br>
+            凱瑞稀 鬆平常的 忐忑
+          </p>
+          <p>
+            屋簷上 停的雁又遲到了<br>
+            彩虹雨 敲打漣漪旋轉著<br>
+            流經 夢境 的河 頁尾 摺的 紙鶴<br>
+            與回憶 裝載章節 會合
+          </p>
+          <p>
+            在汗水之中 對著微風忘記了退縮<br>
+            跌跌撞撞 也不畏懼艱難<br>
+            紫紅的傷痕 會相伴直至恩澤<br>
+            逆風嚴峻啟程
+          </p>
+          <p>
+            咬緊牙忍痛 不得先喘口氣放任<br>
+            秉睿智的 燭光 點亮星辰<br>
+            搖曳的星光 沐浴全心的理想<br>
+            照亮你我的真
+          </p>
+          <p>
+            屋簷上 飛的雁又遲到了<br>
+            是誰又 聽聞紅鶴翱翔著<br>
+            胸懷 璀璨 願景 雁尾 負載 夢想<br>
+            與曾經 奮鬥足跡 對合
+          </p>
+          <p>
+            在藍天之外 迎接旭日忘記了幽暗<br>
+            起起伏伏 也不迷失初衷<br>
+            百里外的霜 也會因你而消融<br>
+            誠意我們共有
+          </p>
+          <p>
+            永遠抬起頭 不眠不休展望未來<br>
+            秉喧鬧的 歡愉 點綴人生<br>
+            像佳節的城 燈火通明的路程<br>
+            賦予善念重生
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="close" class="block">
     <h3 class="title">閉幕</h3>

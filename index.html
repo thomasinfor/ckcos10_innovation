@@ -15,16 +15,21 @@ body, html {height: 100%; color: black!important;}
   font-family: "Snell Roundhand";
   src: url(./fonts/SnellBT-Regular.otf);
 }
-.bgimg {background-image: url('./images/innovation.png');min-height: 100%;background-position: center;background-size: cover;background-color: rgba(255,255,255,0.3);background-blend-mode: lighten;}
+.bgimg {background-image: url('./images/innovation-2400.png');min-height: 100%;background-position: center;background-size: cover;background-color: rgba(255,255,255,0.3);background-blend-mode: lighten;}
 .title{font-family: 'Snell Roundhand';font-size: 18vw;font-weight: 700;margin: 2vh 0;word-break: break-all;text-align: center;color: black;}
 @media only screen and (min-width: 750px){
   .title{font-size: 135px;}
 }
 .w3-display-bottommiddle{width: 100%;}
-.button{border: 3px solid black;color: black!important;transition: 0.8s all ease;border-radius: 8px;position: relative;display: inline-block;padding: 8px 16px;vertical-align: middle;background-color: transparent;font-weight: bold;cursor: pointer;}
+.button{border: 1px solid black;color: black!important;transition: 0.8s all ease;border-radius: 8px;position: relative;display: inline-block;padding: 8px 40px;vertical-align: middle;background-color: transparent;font-weight: bold;cursor: pointer;margin: 2vh 0;}
 .button:before{background: Ivory;content: "";width: 0;height: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: -1;transition: all 0.8s ease;}
 .button:hover:before{width: 100%;}
 .w3-display-bottommiddle > center > p{font-size: 17px!important;}
+@media only screen and (min-width: 900px){
+	.w3-display-bottommiddle > center > p{font-size: 2vw!important;}
+	.button{font-size: 2.5vw;border-radius: 1vw;padding: 0.5vw 4vw;}
+	.title{font-size: 18vh;}
+}
 </style>
 <body>
 
@@ -33,13 +38,13 @@ body, html {height: 100%; color: black!important;}
     <p class="title">Innovation</p>
   </center></div>
   <div class="w3-display-middle w3-container w3-xlarge" style="width: 100%;"><center>
-    <a href="./about-us"><p><button class="button" style="transition: 0.6s;">建科十屆</button></p></a>
-    <a href="./research"><p><button class="button" style="transition: 0.6s;">專題研究</button></p></a>
-    <a href="./video"><p><button class="button" style="transition: 0.6s;">成發錄影</button></p></a>
+    <a href="./about-us"><button class="button" style="transition: 0.6s;">建科十屆</button></a><br>
+    <a href="./research"><button class="button" style="transition: 0.6s;">專題研究</button></a><br>
+    <a href="./video"><button class="button" style="transition: 0.6s;">成發錄影</button></a>
   </center></div>
   <div class="w3-display-bottommiddle w3-container raleway" style="color: black;"><center>
-    <p>2020.06.08 星期一 13:00-17:00</p>
-    <p>臺北市立建國高級中學 夢紅樓展演廳</p>
+    <p><strong>2020.06.08 星期一 13:00-17:00</strong></p>
+    <p><strong>臺北市立建國高級中學 夢紅樓展演廳</strong></p>
   </center></div>
 </div>
 
