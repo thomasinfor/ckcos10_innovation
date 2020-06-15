@@ -10,47 +10,37 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap">
 <style>
 *{font-family: 'Noto Sans TC', sans-serif;max-width: 100%;}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('./images/innovation.png');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
+body, html {height: 100%; color: black!important;}
+@font-face {
+  font-family: "Snell Roundhand";
+  src: url(./fonts/SnellBT-Regular.otf);
 }
-.raleway{
-  font-family: 'Raleway', sans-serif;
-  text-shadow:2px 2px 0 #000;
+.bgimg {background-image: url('./images/innovation.png');min-height: 100%;background-position: center;background-size: cover;background-color: rgba(255,255,255,0.3);background-blend-mode: lighten;}
+.title{font-family: 'Snell Roundhand';font-size: 18vw;font-weight: 700;margin: 2vh 0;word-break: break-all;text-align: center;color: black;}
+@media only screen and (min-width: 750px){
+  .title{font-size: 135px;}
 }
-.tangerine{
-  font-family: 'Tangerine', serif;
-  font-size: 150px;
-  text-shadow:2px 2px 0 #000;
-  word-break: break-all;
-  text-align: center;
-}
-@media only screen and (max-width: 450px) {
-  .tangerine{font-size: 100px;}
-}
-.graybg {
-  background-color: #00000044;
-}
+.w3-display-bottommiddle{width: 100%;}
+.button{border: 3px solid black;color: black!important;transition: 0.8s all ease;border-radius: 8px;position: relative;display: inline-block;padding: 8px 16px;vertical-align: middle;background-color: transparent;font-weight: bold;}
+.button:before{background: Ivory;content: "";width: 0;height: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: -1;transition: all 0.8s ease;}
+.button:hover:before{width: 100%;}
+.w3-display-bottommiddle > center > p{font-size: 17px!important;}
 </style>
 <body>
 
 <div class="bgimg w3-display-container w3-text-white">
-  <div class="w3-display-middle w3-jumbo" style="width: 200%;">
-    <p class="tangerine">Innovation</p>
-  </div>
-  <div class="w3-display-topleft w3-container w3-xlarge">
-    <a href="./about-us"><p><button class="w3-button w3-black" style="transition: 0.6s;">建科十屆</button></p></a>
-    <a href="./research"><p><button class="w3-button w3-black" style="transition: 0.6s;">專題研究</button></p></a>
-    <a href="./video"><p><button class="w3-button w3-black" style="transition: 0.6s;">成發錄影</button></p></a>
-  </div>
-  <div class="w3-display-bottomleft w3-container raleway">
-    <p class="w3-xlarge">2020.06.08 星期一 13:00-17:00</p>
-    <p class="w3-large">臺北市立建國高級中學 夢紅樓展演廳</p>
-    <p>powered by <a href="./research/index.html#information" target="_blank">資訊組</a></p>
-  </div>
+  <div class="w3-display-topmiddle w3-jumbo" style="width: 200%;"><center>
+    <p class="title">Innovation</p>
+  </center></div>
+  <div class="w3-display-middle w3-container w3-xlarge" style="width: 100%;"><center>
+    <a href="./about-us"><p><button class="button" style="transition: 0.6s;">建科十屆</button></p></a>
+    <a href="./research"><p><button class="button" style="transition: 0.6s;">專題研究</button></p></a>
+    <a href="./video"><p><button class="button" style="transition: 0.6s;">成發錄影</button></p></a>
+  </center></div>
+  <div class="w3-display-bottommiddle w3-container raleway" style="color: black;"><center>
+    <p>2020.06.08 星期一 13:00-17:00</p>
+    <p>臺北市立建國高級中學 夢紅樓展演廳</p>
+  </center></div>
 </div>
 
 </body>
