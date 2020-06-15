@@ -28,7 +28,7 @@ html{overflow-y: scroll;scroll-behavior: smooth;}
 #content{min-height: 100vh;background-color: white;}
 #pj0{background: url(../images/logo.png);background-position: center;background-repeat: no-repeat;background-size: contain;width: 100%;min-height: 100%;}
 #content > center > div{display: none;width: 95%;max-width: 650px;}
-.pdfbutton{font-family: consolas;margin: 15px;}
+.pdfbutton{font-family: consolas;margin: 5px;padding: 6px 10px;margin-bottom: 20px;}
 .intro{text-align: left;text-indent: 2em;}
 .w3-bar-block > .w3-bar-item{background-color: #eee;}
 .w3-dropdown-hover > .w3-button{width: 100%;}
@@ -243,7 +243,7 @@ figure > img{margin-bottom: 10px;}
   }
   // pdfbuuton
   function pdfbutton(x){
-    toggle(x.nextElementSibling);
+    toggle(x.nextElementSibling.nextElementSibling.nextElementSibling);
     if(x.innerHTML=='Show PPT'){
       x.innerHTML='Hide PPT';
       x.style.backgroundColor="#ccc";

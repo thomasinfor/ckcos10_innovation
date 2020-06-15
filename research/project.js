@@ -17,8 +17,10 @@ function project(data){
       </div>
       <div>
         <div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton" onclick="pdfbutton(this);">Show PPT</div>
+        <a href="../files/${data.title}.pptx" download="${data.title}"><div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton">Download</div></a>
+        <a href="${data.yt}" target="_blank"><div class="w3-button w3-round-large w3-border w3-border-teal pdfbutton">報告影片</div></a>
         <div class="project-file" style="display: none;">
-          <!-- ${data.ppt} -->
+          <iframe src="../files/${data.title}-ppt.pdf#toolbar=0" style="width: 95vw;height: 50vw;max-height: 359px;"></iframe>
         </div>
       </div>
     </div>`;
