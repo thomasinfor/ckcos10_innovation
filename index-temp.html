@@ -149,6 +149,17 @@ table{text-align: left;font-size: 20px;border-collapse: collapse;border: 1px sol
 #schedule > div > table > tbody > tr:nth-child(even){background-color: #ffffff;}
 td{padding: 15px;}
 button{background-color: #81bf3f!important;}
+@keyframes shine{
+  0%    {box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;}
+  50%   {box-shadow: 0 0 20px 2px #ec008c, 0.5rem 0.5rem 30px #13092d;}
+  100%  {box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;}
+}
+.shine-btn{
+  transition: box-shadow 0.3s;
+  animation: shine 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 .w3-display-middle{width: 100%;}
 </style>
 <body>
@@ -168,7 +179,7 @@ button{background-color: #81bf3f!important;}
   <center><div id="link" class="fade-in">
     <div class="w3-container">
       <div class="w3-cell"><a href="https://www.instagram.com/ckcos10_innovation/" target="_blank"><i class="fa fa-instagram w3-btn"></i></a></div>
-      <div class="w3-cell"><a><img src="./images/icon.png"></a></div>
+      <div class="w3-cell"><a href="./index.html"><img src="./images/icon.png" class="w3-btn" id="entrance"></a></div>
       <div class="w3-cell"><a href="https://www2.ck.tp.edu.tw/" target="_blank"><img class="w3-btn" src="./images/ck-logo.png"></a></div>
     </div>
   </div></center>
@@ -218,7 +229,10 @@ button{background-color: #81bf3f!important;}
   var target=new Date("June 16, 2020");
   var now=new Date();
   var diff=parseInt((target.getTime()-1-now.getTime())/86400000);
-  document.getElementById('time').innerHTML=diff;
+  document.getElementById('time').innerHTML=Math.max(0,diff);
+  if(Math.max(0,diff)==0){
+    document.getElementById('entrance').classList.add('shine-btn');
+  }
 </script>
 </body>
 </html>
